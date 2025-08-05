@@ -6,6 +6,7 @@ yarn-error.log*
 # Ignore all files in inputs folder except example.json
 inputs/*
 !inputs/curriculo-examplo.json
+!inputs/curriculo-base.json
 
 # Ignore outputs folder except example PDF
 outputs/*

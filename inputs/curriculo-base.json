@@ -1,0 +1,82 @@
+{
+	"fullName": "João Victor Santos",
+	"jobTitle": "Software Developer",
+	"contact": {
+		"linkedin": "linkedin.com/in/joao-victor-a-santos",
+		"github": "github.com/hackermannjon",
+		"location": "Brasília, Brazil",
+		"email": "joaosantos3563@gmail.com"
+	},
+	"summary": "A results-oriented Software Developer specializing in the React ecosystem. Possesses hands-on experience building high-performance web and mobile applications, from concept to launch, using React, Next.js, and React Native. Proactive and with a strong problem-solving mindset, focused on creating responsive, intuitive, and scalable user interfaces in agile development environments.",
+	"skills": [
+		{
+			"category": "Frontend & Mobile",
+			"list": "React, React Native, Next.js, TypeScript, JavaScript (ES6+), Redux.js, HTML5, CSS3"
+		},
+		{
+			"category": "DevOps & Tools",
+			"list": "Docker, CI/CD, Git, Firebase, Cloudflare"
+		},
+		{
+			"category": "Methodologies",
+			"list": "Agile, Scrum"
+		}
+	],
+	"experience": [
+		{
+			"role": "Software Engineer",
+			"company": "Simplify Tecnologia",
+			"location": "Brasília, Brazil (Remote)",
+			"period": "April 2025 - Present",
+			"description": [
+				"Contributes to the development of full-stack solutions for international client projects, working with modern web technologies in an agile team."
+			]
+		},
+		{
+			"role": "Co-Founder & Lead Developer",
+			"company": "Blind App",
+			"location": "Brasília, Brazil (Remote)",
+			"period": "May 2023 - Present",
+			"links": {
+				"googlePlay": "https://play.google.com/store/apps/details?id=com.blindApp",
+				"website": "https://blind.app.br"
+			},
+			"description": [
+				"Co-founded the application and led the end-to-end development of the digital ecosystem.",
+				"Developed the primary mobile application using React Native and TypeScript.",
+				"Architected and developed a responsive web application and landing page with React and Next.js.",
+				"Managed the development lifecycle in an agile team based on Scrum."
+			]
+		},
+		{
+			"role": "Data Science Intern",
+			"company": "Federal Court of Accounts (TCU)",
+			"location": "Brasília, Brazil",
+			"period": "January 2022 - March 2023",
+			"description": [
+				"Developed and maintained internal systems, gaining significant experience in requirements gathering, database modeling, system testing, and documentation."
+			]
+		}
+	],
+	"education": [
+		{
+			"institution": "University of Brasília (UnB)",
+			"degree": "Bachelor of Engineering, Computer Engineering",
+			"graduation": "June 2025"
+		}
+	],
+	"languages": [
+		{
+			"language": "Portuguese",
+			"proficiency": "Native"
+		},
+		{
+			"language": "English",
+			"proficiency": "Full Professional Proficiency"
+		},
+		{
+			"language": "French",
+			"proficiency": "Elementary"
+		}
+	]
+}
