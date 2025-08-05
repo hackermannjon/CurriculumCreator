@@ -3,16 +3,16 @@
 	"version": "1.0.0",
 	"description": "Gera PDFs de currículos a partir de arquivos JSON.",
 	"main": "index.js",
+	"bin": "index.js",
 	"scripts": {
-		"start": "node index.js"
+		"start": "node index.js",
+		"build": "pkg . --targets node18-win-x64 --output dist/GeradorCurriculo.exe"
 	},
 	"keywords": [
 		"pdf",
-		"resume",
-		"generator",
-		"puppeteer"
+		"resume"
 	],
-	"author": "Seu Nome",
+	"author": "Joao Victor Santos",
 	"license": "ISC",
 	"dependencies": {
 		"puppeteer": "^22.12.1"

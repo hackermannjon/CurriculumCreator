@@ -8,8 +8,9 @@ yarn-error.log*
 inputs/*
 !inputs/curriculo-examplo.json
 
-# Ignore outputs folder
-outputs/
+# Ignore outputs folder except example PDF
+outputs/*
+!outputs/curriculo-examplo.pdf
 
 # Environment variables
 .env

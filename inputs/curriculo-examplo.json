@@ -1,82 +1,69 @@
 {
-	"fullName": "João Victor Santos",
-	"jobTitle": "Software Developer",
+	"fullName": "Seu Nome Completo Aqui",
+	"jobTitle": "Seu Cargo ou Título Profissional (ex: Desenvolvedor de Software)",
 	"contact": {
-		"linkedin": "linkedin.com/in/joao-victor-a-santos",
-		"github": "github.com/hackermannjon",
-		"location": "Brasília, Brazil",
-		"email": "joaosantos3563@gmail.com"
+		"linkedin": "linkedin.com/in/seu-usuario-aqui",
+		"github": "github.com/seu-usuario-do-github",
+		"location": "Sua Cidade, Estado",
+		"email": "seu.email@exemplo.com"
 	},
-	"summary": "A results-oriented Software Developer specializing in the React ecosystem. Possesses hands-on experience building high-performance web and mobile applications, from concept to launch, using React, Next.js, and React Native. Proactive and with a strong problem-solving mindset, focused on creating responsive, intuitive, and scalable user interfaces in agile development environments.",
+	"summary": "Escreva aqui um resumo profissional de 2 a 4 frases. Destaque suas principais qualidades, anos de experiência e as tecnologias que você domina. Pense nisso como sua 'venda' inicial para o recrutador.",
 	"skills": [
 		{
-			"category": "Frontend & Mobile",
-			"list": "React, React Native, Next.js, TypeScript, JavaScript (ES6+), Redux.js, HTML5, CSS3"
+			"category": "Frontend & Mobile (exemplo)",
+			"list": "React, React Native, Next.js, TypeScript, JavaScript, HTML5, CSS3"
 		},
 		{
-			"category": "DevOps & Tools",
-			"list": "Docker, CI/CD, Git, Firebase, Cloudflare"
+			"category": "DevOps & Ferramentas (exemplo)",
+			"list": "Docker, CI/CD, Git, Firebase"
 		},
 		{
-			"category": "Methodologies",
-			"list": "Agile, Scrum"
+			"category": "Metodologias (exemplo)",
+			"list": "Agile, Scrum, Kanban"
 		}
 	],
 	"experience": [
 		{
-			"role": "Software Engineer",
-			"company": "Simplify Tecnologia",
-			"location": "Brasília, Brazil (Remote)",
-			"period": "April 2025 - Present",
+			"role": "Nome do Cargo (Experiência 1)",
+			"company": "Nome da Empresa",
+			"location": "Cidade, Estado (ou 'Remoto')",
+			"period": "Mês Ano de Início - Presente (ou Mês Ano de Fim)",
 			"description": [
-				"Contributes to the development of full-stack solutions for international client projects, working with modern web technologies in an agile team."
+				"Descreva aqui sua primeira responsabilidade ou conquista neste cargo.",
+				"Use um item da lista para cada ponto importante. Tente focar em resultados.",
+				"Exemplo: 'Desenvolvi e implementei um novo sistema de e-commerce, aumentando as vendas em 20%.'"
 			]
 		},
 		{
-			"role": "Co-Founder & Lead Developer",
-			"company": "Blind App",
-			"location": "Brasília, Brazil (Remote)",
-			"period": "May 2023 - Present",
+			"role": "Nome do Cargo (Experiência 2)",
+			"company": "Nome da Empresa Anterior",
+			"location": "Cidade, Estado",
+			"period": "Mês Ano de Início - Mês Ano de Fim",
 			"links": {
-				"googlePlay": "https://play.google.com/store",
-				"website": "https://blindapp.com.br"
+				"googlePlay": "https://play.google.com/store/apps/details?id=com.example.app",
+				"website": "https://www.projetonessaempresa.com.br"
 			},
 			"description": [
-				"Co-founded the application and led the end-to-end development of the digital ecosystem.",
-				"Developed the primary mobile application using React Native and TypeScript.",
-				"Architected and developed a responsive web application and landing page with React and Next.js.",
-				"Managed the development lifecycle in an agile team based on Scrum."
-			]
-		},
-		{
-			"role": "Data Science Intern",
-			"company": "Federal Court of Accounts (TCU)",
-			"location": "Brasília, Brazil",
-			"period": "January 2022 - March 2023",
-			"description": [
-				"Developed and maintained internal systems, gaining significant experience in requirements gathering, database modeling, system testing, and documentation."
+				"Nesta experiência, você pode ver o campo 'links', que é opcional.",
+				"Use-o para mostrar projetos, portfólios ou aplicativos relevantes para este cargo específico."
 			]
 		}
 	],
 	"education": [
 		{
-			"institution": "University of Brasília (UnB)",
-			"degree": "Bachelor of Engineering, Computer Engineering",
-			"graduation": "Expected Grad: June 2025"
+			"institution": "Nome da Sua Universidade ou Instituição de Ensino",
+			"degree": "Seu Curso (ex: Bacharelado em Ciência da Computação)",
+			"graduation": "Data de Conclusão (ex: Graduado em Junho 2025)"
 		}
 	],
 	"languages": [
 		{
-			"language": "Portuguese",
-			"proficiency": "Native"
+			"language": "Português",
+			"proficiency": "Nativo"
 		},
 		{
-			"language": "English",
-			"proficiency": "Full Professional Proficiency"
-		},
-		{
-			"language": "French",
-			"proficiency": "Elementary"
+			"language": "Inglês",
+			"proficiency": "Nível de Proficiência (ex: Avançado, Profissional)"
 		}
 	]
 }
