@@ -15,16 +15,28 @@ echo Por favor, aguarde enquanto o processo e executado...
 echo Esta janela se fechara ao final.
 echo.
 
+REM Define variáveis de ambiente para automação
+set npm_config_yes=true
+set CI=true
+
+echo 🚀 Iniciando geracao dos PDFs...
+echo.
+
 REM Executa o script Node.js usando o executável portátil
 REM %~dp0 é uma variável especial que significa "a pasta onde este .bat está"
 "%~dp0\node\node.exe" "%~dp0\app\index.js"
 
-REM Mensagem de finalização (opcional, pois o script node já loga)
-REM echo.
-REM echo Processo finalizado! Verifique a pasta 'outputs'.
-
-REM Pausa o script para que o usuário possa ler a saída antes de fechar
-REM pause
+REM Verifica se houve erro na execução
+if errorlevel 1 (
+    echo.
+    echo ❌ Houve um erro durante a execucao.
+    echo Verifique os arquivos JSON na pasta 'inputs' e tente novamente.
+    pause
+) else (
+    echo.
+    echo ✅ Processo concluido com sucesso!
+    echo Verifique a pasta 'outputs' para os PDFs gerados.
+)
 
 REM Fecha a janela do console
 exit

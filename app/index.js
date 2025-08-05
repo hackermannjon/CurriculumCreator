@@ -2,6 +2,34 @@ const puppeteer = require("puppeteer");
 const fs = require("fs").promises;
 const path = require("path");
 
+// Função para verificar se o Chrome está instalado e retornar o caminho
+async function findChromeExecutable() {
+	try {
+		// Tenta encontrar o Chrome nas localizações padrão do Windows
+		const possiblePaths = [
+			"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+			"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+			process.env.LOCALAPPDATA + "\\Google\\Chrome\\Application\\chrome.exe"
+		];
+		
+		for (const chromePath of possiblePaths) {
+			try {
+				await fs.access(chromePath);
+				console.log("✅ Chrome encontrado:", chromePath);
+				return chromePath;
+			} catch (error) {
+				// Continue procurando
+			}
+		}
+		
+		console.log("❌ Chrome não encontrado no sistema.");
+		return null;
+	} catch (error) {
+		console.log("❌ Erro ao verificar instalação do Chrome:", error.message);
+		return null;
+	}
+}
+
 // A função que gera o HTML permanece a mesma.
 function getHtmlForResume(data) {
 	const createExperienceHtml = (experiences) =>
@@ -188,11 +216,33 @@ async function generateResumes() {
 	const outputDir = path.join(__dirname, "..", "outputs");
 	await fs.mkdir(outputDir, { recursive: true });
 
-	console.log("Iniciando o gerador de currículos...");
-	const browser = await puppeteer.launch({
+	console.log("🚀 Iniciando o gerador de currículos...");
+	
+	// Verifica se o Chrome está instalado
+	const chromeExecutable = await findChromeExecutable();
+	
+	console.log("🌐 Iniciando navegador...");
+	
+	// Configuração do puppeteer
+	const launchOptions = {
 		headless: true,
-		args: ["--no-sandbox"],
-	});
+		args: [
+			"--no-sandbox", 
+			"--disable-setuid-sandbox",
+			"--disable-dev-shm-usage",
+			"--disable-gpu"
+		],
+	};
+	
+	// Se encontrou o Chrome, usa ele. Senão, deixa o Puppeteer usar o Chromium bundled
+	if (chromeExecutable) {
+		launchOptions.executablePath = chromeExecutable;
+		console.log("🌐 Usando Chrome do sistema:", chromeExecutable);
+	} else {
+		console.log("🌐 Usando Chromium do Puppeteer...");
+	}
+
+	const browser = await puppeteer.launch(launchOptions);
 
 	try {
 		const files = await fs.readdir(inputDir);
@@ -295,8 +345,31 @@ async function generateResumes() {
 		console.error("Ocorreu um erro durante o processo:", error);
 	} finally {
 		await browser.close();
-		console.log("\n--- Processo finalizado ---");
+		console.log("\n🎉 Processo finalizado com sucesso! 🎉");
+		console.log("📁 Verifique a pasta 'outputs' para os PDFs gerados.");
 	}
 }
 
-generateResumes();
+// Função principal que executa tudo
+async function main() {
+	try {
+		// Verifica se o Puppeteer está disponível
+		try {
+			require.resolve("puppeteer");
+		} catch (error) {
+			console.error("❌ Puppeteer não está instalado!");
+			console.log("📦 Para instalar o Puppeteer, execute:");
+			console.log("   npm install puppeteer");
+			console.log("");
+			console.log("⚠️  O script não pode continuar sem o Puppeteer.");
+			process.exit(1);
+		}
+		
+		await generateResumes();
+	} catch (error) {
+		console.error("💥 Erro crítico durante a execução:", error);
+		process.exit(1);
+	}
+}
+
+main();
