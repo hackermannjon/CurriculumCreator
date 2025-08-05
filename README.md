@@ -9,7 +9,7 @@ Bem-vindo! Esta é uma ferramenta simples para criar um currículo profissional 
 Siga estes 3 passos simples:
 
 1.  **Edite o Arquivo de Texto**: Abra a pasta `inputs` e edite o arquivo `exemplo_curriculo.json` com suas informações pessoais. Use um editor de texto simples como o Bloco de Notas (Windows) ou TextEdit (Mac).
-2.  **Execute o Programa**: Dê um duplo clique no arquivo `GeradorCurriculo.exe`. Uma tela preta aparecerá por alguns segundos e depois se fechará sozinha. Isso é normal!
+2.  **Execute o Programa**: Dê um duplo clique no arquivo `gerador.bat`. Uma tela preta aparecerá por alguns segundos e depois se fechará sozinha. Isso é normal!
 3.  **Pegue seu PDF**: Vá para a pasta `outputs`. Seu currículo em PDF estará lá, pronto para ser enviado!
 
 ---
